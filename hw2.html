@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// ЗАДАНИЕ1
+
+//пример 1
+// let a = 1, b = 1, c, d;
+// c = ++a;
+// alert(c); // ответ: 2  - Инкримент префиксной формы (1+1=2)
+// //пример 2
+// d = b++;
+// alert(d); //ответ: 1   - Инкримент постфиксной формы
+// //пример 3
+// c = 2 + ++a; 
+// alert(c); //ответ: 5   - Инкримент префиксной формы (2 + ++2)=5
+// //пример 4
+// d = 2 + b++;
+// alert(d); //ответ: 4   - Инкримент постфиксной формы 2+2 (т.к. выше после операции в примере 2 b сменило значение на 2)
+// alert(a); //3 (Два раза вызывали инкремент а >>> 1+1+1 = 3)
+// alert(b); //3 (Два раза вызывали инкремент b >>> 1+1+1 = 3 )
+
+
+// // ЗАДАНИЕ2
+
+// let a = 2;
+// // let x = 1 + (a *= 2); овтет a = 4, т.к. изнеачально а=2, далее присваивание с умножением a = 2*2 = 4; далее + 1 = 5 (значение x)
+
+// // ЗАДАНИЕ3
+
+// let z = +prompt("Введите целочисленное значение1");
+// let y = +prompt("Введите целочисленное значение2");
+
+// if (z >= 0 && y >= 0) {
+
+//     alert("Разность значений равна " + (z-y));
+//     } else if (z < 0 && y < 0) {
+//         alert("Произведение значений равно " + (z*y));
+//     } else {
+//         alert("Сумма значений равна " + (z+y));
+//     }
+
+// ЗАДАНИЕ4
+
+let m = +prompt ("Введите число 1")
+let n = +prompt ("Введите число 2")
+
+function sum (m,n) {
+    return m + n;
+}
+
+function substrn (m,n) {
+    return m - n;
+}
+
+function dvsn (m,n) {
+    return m / n;
+}
+
+function multi (m,n) {
+    return m * n;
+}
+
+// ЗАДАНИЕ5
+
+function mathOperation(arg1, arg2, operation) {
+    switch (operation) {
+        case "+":
+            return addition(arg1, arg2);
+        case "-":
+            return subtraction(arg1, arg2);
+        case "/":
+            return division(arg1, arg2);
+        case "*":
+            return multiplication(arg1, arg2);
+        default:
+            throw new Error("Операция " + operation + " не предусмотрена");
+    }
+}
+
+console.log(mathOperation(3, 5, "+"));
+console.log(mathOperation(3, 5, "-"));
+console.log(mathOperation(3, 5, "/"));
+console.log(mathOperation(3, 5, "*"));
+console.log(mathOperation(3, 5, "lorem"));
+
+
+
+    </script>
+</body>
+</html>
